@@ -1,0 +1,10 @@
+# ===== Terminal Codes ===== #
+
+deactivate
+Remove-Item -Recurse -Force venv
+cd "D:\Projects\Research_Paper_Finder"
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+python -m pip freeze > requirements.txt
+uvicorn main:app --reload
