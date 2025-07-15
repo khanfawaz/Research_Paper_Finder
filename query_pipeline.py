@@ -12,7 +12,7 @@ def run_full_query_pipeline(
 
     if source.lower() in ["arxiv", "all"]:
         papers = search_arxiv(keyword, input_type=input_type, year_filter=year_filter)
-        for paper in papers:
+        for paper in papers[:5]:
             summary = summarize_text(paper["abstract"])
             all_results.append({
                 "title": paper["title"],

@@ -40,7 +40,7 @@ if st.sidebar.button("🔎 Search Research Papers"):
                 results = run_full_query_pipeline(
                     keyword=search_input,
                     source=source,
-                    year_cutoff=year_cutoff
+                    year_filter=year_cutoff
                 )
 
                 if results:
@@ -50,7 +50,7 @@ if st.sidebar.button("🔎 Search Research Papers"):
                         st.markdown(f"**Authors:** {', '.join(paper['authors'])}")
                         st.markdown(f"**Published:** {paper['published'][:10]}")
                         st.markdown(f"**Summary:** {paper['summary']}")
-                        st.markdown(f"[🔗 Full Paper Link]({paper['source']})", unsafe_allow_html=True)
+                        st.markdown(f"[{paper['source']}]({paper['source']})", unsafe_allow_html=True)
                         st.markdown("---")
                 else:
                     st.warning("No results found. Try different keywords or filters.")
