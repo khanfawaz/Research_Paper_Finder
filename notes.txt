@@ -17,3 +17,4 @@ git commit -m "Initial commit: FastAPI + Groq Research Paper Finder"
 git remote add origin https://github.com/khanfawaz/Research_Paper_Finder.git
 git branch -M main
 git push -u origin main
+git status
