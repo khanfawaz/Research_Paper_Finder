@@ -7,3 +7,5 @@ __pycache__/
 venv/
 .gitignore
 notes.txt
+
+env.example
